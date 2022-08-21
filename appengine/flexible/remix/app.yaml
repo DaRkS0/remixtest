@@ -1,0 +1,10 @@
+# app.yaml
+runtime: nodejs16
+instance_class: F1
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: './firebase-admin-key.json'
+  SESSION_SECRET: 's3cret'
+  GCLOUD_PROJECT: 'remix-app-XXXXX'
+handlers:
+  - url: /build
+    static_dir: public/build
